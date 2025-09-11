@@ -48,7 +48,13 @@ namespace SaintCoinach.Cmd.Commands {
                     outPathSb.AppendFormat("{0}/{1}", map.Id.ToString().Split('/')[0], map.Id.ToString().Replace("/", "."));
                     outPathSb.Append(FormatToExtension(format));
                 } else {
-                    var territoryName = map.TerritoryType?.Name?.ToString();
+                    string territoryName = "";
+                    try {
+                        territoryName = map.TerritoryType?.Name?.ToString();
+                    } catch (Exception e) {
+                        OutputError($"Error processing map {map.Id}: {e.Message}");
+                        continue;
+                    }
                     if (!string.IsNullOrEmpty(territoryName)) {
                         if (territoryName.Length < 3) {
                             outPathSb.AppendFormat("{0}/", territoryName);

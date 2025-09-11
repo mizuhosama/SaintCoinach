@@ -135,7 +135,7 @@
       "name": "ExpRewarded"
     },
     {
-      "index": 39,
+      "index": 40,
       "name": "Status{Required}",
       "converter": {
         "type": "link",
@@ -143,7 +143,7 @@
       }
     },
     {
-      "index": 40,
+      "index": 41,
       "name": "Item{Required}",
       "converter": {
         "type": "link",
@@ -151,15 +151,15 @@
       }
     },
     {
-      "index": 41,
+      "index": 42,
       "name": "IsSpecializationRequired"
     },
     {
-      "index": 42,
+      "index": 43,
       "name": "IsExpert"
     },
     {
-      "index": 45,
+      "index": 46,
       "name": "PatchNumber"
     }
   ]
